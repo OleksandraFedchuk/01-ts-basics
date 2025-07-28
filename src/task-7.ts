@@ -1,9 +1,9 @@
-function getMessage(ms: number) {
+function getMessage(): Promise<string> {
   return new Promise<string>((resolve) => {
     setTimeout(() => {
       resolve("Hello from TS");
-    }, ms);
+    }, 1000);
   });
 }
 
-getMessage(1000).then((result) => console.log(result));
+getMessage().then((result) => console.log(result));
